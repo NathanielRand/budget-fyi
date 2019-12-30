@@ -52,6 +52,10 @@ Command: yarn add node-sass@4.13.0
 Package: https://necolas.github.io/normalize.css/
 Command: yarn add normalize.css@7.0.0
 
+Package: https://reacttraining.com/react-router/
+Command: yarn add react-router-dom@4.2.2
+Notes: Web version, not Native.
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
