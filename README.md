@@ -1,3 +1,5 @@
-# Indecision - Web Application
-## Built in ReactJS
-# budget-fyi
+# BudgetFYI
+
+## A simple budgeting web application built in React
+
+### By Nathaniel Rand

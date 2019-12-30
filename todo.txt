@@ -1,0 +1,8 @@
+TODO:
+
+1 - Options Component: Reset option's validations error message when delete options is called 
+Example: send empty value to form, error message called, and then call delete all options
+but the error message remains.
+
+2 - Option Component: Add % chance of option being picked next to each option.
+Sudo: 1 divided by options.length returns % chance of option being picked.

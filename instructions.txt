@@ -1,0 +1,88 @@
+Indecision - Web Application
+
+Instructions for configuration, development, and deployment.
+
+Todo:
+- Resolve: Error realted to sass-loader: https://github.com/webpack-contrib/sass-loader/issues/761
+
+------------------------------------------
+Stack:
+- ReactJS
+- JSX
+- Babel
+- Yarn
+- live-server (development server)
+- expressjs (production server)
+------------------------------------------
+
+Third-party Packages (Found in: package.json):
+
+Package: https://www.npmjs.com/package/react
+Command: yarn add react@16.0.0
+
+Package: https://www.npmjs.com/package/react-dom
+Command: yarn add react-dom@16.0.0
+
+Package: https://www.npmjs.com/package/validator
+Command: yarn add validator@8.0.0
+
+Package: https://www.npmjs.com/package/babel-core
+Command: yarn add babel-core@6.25.0
+Note: allows you to run babel from tools like webpack; Still needs configuration with presets
+
+Package: https://www.npmjs.com/package/babel-loader
+Command: yarn add babel-loader@7.1.1
+Note: a webpack plugin; teach webpack how to run babel when webpack sees certain files
+
+Package: https://github.com/reactjs/react-modal
+Command: yarn add react-module@2.2.2
+
+Package: https://www.npmjs.com/package/css-loader
+Command: yarn add css-loader@0.28.4
+
+Package: https://www.npmjs.com/package/style-loader
+Command: yarn add style-loader@0.18.2
+
+Package: https://www.npmjs.com/package/sass-loader
+Command: yarn add sass-loader@7.3.1
+
+Package: https://www.npmjs.com/package/node-sass
+Command: yarn add node-sass@4.13.0
+
+Package: https://necolas.github.io/normalize.css/
+Command: yarn add normalize.css@7.0.0
+
+WARNINGS:
+warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
+warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
+
+------------------------------------------
+
+Start Webpack Dev Server
+Command: 'yarn run dev-server'
+
+------------------------------------------
+
+Yarn
+- Install all dependencies from package.json. Useful for spinning up other projects.
+Command: `yarn install`
+
+Development Server
+- Used in development environment only. Run command on root project folder.
+- Open new terminal window, nav to project root folder, and run the command below:
+
+(Local module - script command via package.json)
+Command: 'yarn run server'
+
+(Inactive: global module)
+Command: `live-server public`
+
+Babel
+- Watch src app.js file for changes to auto-update public app.js file. If failed, check dependencies are installed (reference Yarn commands).
+- Open new terminal window, nav to project root folder, and run the command below:
+
+(Local module - script command via package.json)
+Command: 'yarn run build'
+
+(Inactive: global module)
+Command: `babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch`
