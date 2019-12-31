@@ -2,7 +2,7 @@ const path = require("path");
 
 // Object for defining our configuration details for a webpack build.
 module.exports = {
-  entry: "./src/playground/es6-array-destructuring.js",
+  entry: "./src/playground/redux-101.js",
   output: {
     path: path.join(__dirname, "public"),
     filename: "bundle.js"
