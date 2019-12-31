@@ -1,8 +1,10 @@
 TODO:
 
-1 - Options Component: Reset option's validations error message when delete options is called 
-Example: send empty value to form, error message called, and then call delete all options
-but the error message remains.
-
-2 - Option Component: Add % chance of option being picked next to each option.
-Sudo: 1 divided by options.length returns % chance of option being picked.
+1 - Add salary
+2 - Add "budget/salary" and remaining salary to show how much money relative to your salary you are spending
+2.5 - Dynamic message depending on how close to the salary your budget is (i.e low budget = positive, high budget = warning, over budget = negative)
+3 - Suggest donation of 0.25% to support BudgetFYI
+4 - Sponsor/AD under budget widget
+5 - Sponsor/AD on create & edit expense modal
+6 - Add reoccurring to create/edit expense form (daily, weekly, monthly, annual)
+7 - Text/email budget summary.
