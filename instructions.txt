@@ -65,6 +65,9 @@ Command: yarn add uuid@3.1.0
 Package:https://www.npmjs.com/package/babel-plugin-transform-object-rest-spread
 Command: yarn add babel-plugin-transform-object-rest-spread@6.23.0
 
+Package: https://react-redux.js.org/
+Command: yarn add react-redux@5.0.5
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
