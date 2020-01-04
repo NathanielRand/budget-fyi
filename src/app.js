@@ -12,15 +12,15 @@ import "./styles/styles.scss";
 const store = configureStore();
 
 store.dispatch(
-  addExpense({ description: "Water Bill", amount: 1000, createdAt: 1000 })
+  addExpense({ description: "Water Bill", amount: 1500, createdAt: 1000 })
 );
 store.dispatch(
-  addExpense({ description: "Power Bill", amount: 5000, createdAt: 1500 })
+  addExpense({ description: "Power Bill", amount: 4000, createdAt: 1500 })
 );
 store.dispatch(
-  addExpense({ description: "Phone Bill", amount: 10000, createdAt: 1600 })
+  addExpense({ description: "Phone Bill", amount: 5000, createdAt: 1600 })
 );
-store.dispatch(setTextFilter("pow"));
+store.dispatch(setTextFilter("er"));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);

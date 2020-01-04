@@ -1,5 +1,5 @@
 // Get visible expenses
-const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
+export default (expenses, { text, sortBy, startDate, endDate }) => {
   return expenses
     .filter(expense => {
       const startDateMatch =
@@ -20,5 +20,3 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
       }
     });
 };
-
-export default getVisibleExpenses;
