@@ -68,6 +68,17 @@ Command: yarn add babel-plugin-transform-object-rest-spread@6.23.0
 Package: https://react-redux.js.org/
 Command: yarn add react-redux@5.0.5
 
+Package: https://momentjs.com/
+Command: yarn add moment@2.18.1
+
+Package: https://airbnb.io/react-dates/?path=/story/singledatepicker-sdp--default
+Command: yarn add react-dates@12.7.0
+Note: Requires peer dependency below (react-addons-shallow-compare)
+
+Package: https://www.npmjs.com/package/react-addons-shallow-compare
+Command: yarn add react-addons-shallow-compare@15.6.0
+
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
