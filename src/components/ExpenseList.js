@@ -6,6 +6,7 @@ import selectExpense from "../selectors/expenses";
 const ExpenseList = props => (
   <div>
     <h1>Expense List</h1>
+    <p>$1000 (EXPENSES) / $1300 (INCOME)</p>
     <p>Expense Total: </p>
     <p>Expense Count: {props.expenses.length}</p>
     <p>Expense Average:</p>
