@@ -20,7 +20,7 @@ store.dispatch(
 store.dispatch(
   addExpense({ description: "Phone Bill", amount: 5000, createdAt: 1600 })
 );
-store.dispatch(setTextFilter("er"));
+store.dispatch(setTextFilter("Bill"));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
