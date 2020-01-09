@@ -9,7 +9,7 @@ const ExpenseList = props => (
     <p>$1000 (EXPENSES) / $1300 (INCOME)</p>
     <p>Expense Total: </p>
     <p>Expense Count: {props.expenses.length}</p>
-    <p>Expense Average:</p>
+    <p>Expense Average: (length divided by total then round up to floor)</p>
     <br></br>
     {props.expenses.map(expense => {
       return <ExpenseListItem key={expense.id} {...expense} />;
