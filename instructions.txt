@@ -78,6 +78,8 @@ Note: Requires peer dependency below (react-addons-shallow-compare)
 Package: https://www.npmjs.com/package/react-addons-shallow-compare
 Command: yarn add react-addons-shallow-compare@15.6.0
 
+Package: https://jestjs.io/docs/en/getting-started
+Command: yarn add jest@20.0.4 
 
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
