@@ -1,4 +1,5 @@
 const add = (a, b) => a + b;
+const generateGreeting = (name = "Anonymous") => `Hello ${name}!`;
 
 test("Should add two numbers", () => {
   const result = add(1, 2);
@@ -10,4 +11,14 @@ test("Should add two numbers", () => {
 
   // Jest assertion function replacement.
   expect(result).toBe(3);
+});
+
+test("Should generate greeting from name", () => {
+  const result = generateGreeting("Nathaniel");
+  expect(result).toBe("Hello Nathaniel!");
+});
+
+test("Should generate greeting from anonymous", () => {
+  const result = generateGreeting();
+  expect(result).toBe("Hello Anonymous!");
 });
