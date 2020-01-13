@@ -82,6 +82,9 @@ Package: https://jestjs.io/docs/en/getting-started
 Command: yarn add jest@20.0.4 
 Run Command: yarn test -- --watch
 
+Pacakge: https://reactjs.org/docs/test-renderer.html
+Command: yarn add react-test-renderer@16.0.0
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
