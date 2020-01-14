@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ExpenseList with empty message 1`] = `
+<div>
+  <p>
+    $1000 (EXPENSES) / $1300 (INCOME)
+  </p>
+  <p>
+    Expense Total: 
+  </p>
+  <p>
+    Expense Count: 
+    0
+  </p>
+  <p>
+    Expense Average: (length divided by total then round up to floor)
+  </p>
+  <p>
+    No Expenses
+  </p>
+</div>
+`;
+
+exports[`Should render ExpenseList with expenses 1`] = `
+<div>
+  <p>
+    $1000 (EXPENSES) / $1300 (INCOME)
+  </p>
+  <p>
+    Expense Total: 
+  </p>
+  <p>
+    Expense Count: 
+    3
+  </p>
+  <p>
+    Expense Average: (length divided by total then round up to floor)
+  </p>
+  <ExpenseListItem
+    amount={4000}
+    createdAt={0}
+    description="Phone"
+    id={1}
+    key="1"
+    notes=""
+  />
+  <ExpenseListItem
+    amount={75000}
+    createdAt={-604800000}
+    description="Rent"
+    id={2}
+    key="2"
+    notes=""
+  />
+  <ExpenseListItem
+    amount={10000}
+    createdAt={604800000}
+    description="Utility"
+    id={3}
+    key="3"
+    notes=""
+  />
+</div>
+`;

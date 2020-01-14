@@ -1,10 +1,15 @@
 import React from "react";
-import ReactShallowRenderer from "react-test-renderer/shallow";
+import { shallow } from "enzyme";
 import Header from "../../components/Header";
-import { getExpectedBodyHash } from "twilio/lib/webhooks/webhooks";
+// import toJson from "enzyme-to-json";
 
 test("Should render Header correctly", () => {
-  const renderer = new ReactShallowRenderer();
-  renderer.render(<Header />);
-  expect(renderer.getRenderOutput()).toMatchSnapshot();
+  const wrapper = shallow(<Header />);
+  expect(wrapper).toMatchSnapshot();
+
+  // expect(wrapper.find("h1").text()).toBe("BudgetFYI");
+
+  // const renderer = new ReactShallowRenderer();
+  // renderer.render(<Header />);
+  // expect(renderer.getRenderOutput()).toMatchSnapshot();
 });

@@ -77,16 +77,27 @@ Note: Requires peer dependency below (react-addons-shallow-compare)
 
 Package: https://www.npmjs.com/package/react-addons-shallow-compare
 Command: yarn add react-addons-shallow-compare@15.6.0
+Note: Project uses enzyme instead. Unsure if needed for dependencies.
 
 Package: https://jestjs.io/docs/en/getting-started
 Command: yarn add jest@20.0.4 
-Run Command: yarn test -- --watch
+Run: yarn test -- --watch
 
 Package: https://reactjs.org/docs/test-renderer.html
 Command: yarn add react-test-renderer@16.0.0
 
 Package: https://www.npmjs.com/package/enzyme
 Command: yarn add enzyme@3.0.0
+
+Package: https://www.npmjs.com/package/enzyme-adapter-react-16
+Command: yarn add enzyme-adapter-react-16@1.0.0
+
+Package: https://www.npmjs.com/package/raf
+Command: yarn add raf@3.3.2
+
+Package: https://www.npmjs.com/package/enzyme-to-json
+Command: yarn add enzyme-to-json@3.4.3
+Purpose: Allows us to get JSON back from enzyme
 
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
