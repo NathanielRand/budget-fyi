@@ -99,6 +99,11 @@ Package: https://www.npmjs.com/package/enzyme-to-json
 Command: yarn add enzyme-to-json@3.4.3
 Purpose: Allows us to get JSON back from enzyme
 
+Package: https://www.npmjs.com/package/extract-text-webpack-plugin
+Command: yarn add extract-text-webpack-plugin@3.0.0
+Purpose: Extract CSS text from a bundle, or bundles, into a separate file.
+Note: DEPRECATED
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
