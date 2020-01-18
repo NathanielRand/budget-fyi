@@ -16,6 +16,8 @@ Stack:
 ------------------------------------------
 
 Third-party Packages (Found in: package.json):
+Download all dependencies from package.json
+Command: yarn install 
 
 Package: https://www.npmjs.com/package/react
 Command: yarn add react@16.0.0
@@ -103,6 +105,10 @@ Package: https://www.npmjs.com/package/extract-text-webpack-plugin
 Command: yarn add extract-text-webpack-plugin@3.0.0
 Purpose: Extract CSS text from a bundle, or bundles, into a separate file.
 Note: DEPRECATED
+
+Package: http://expressjs.com/
+Command: yarn add express@4.15.4
+Purpose: Production web server.
 
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
