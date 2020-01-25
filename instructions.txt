@@ -3,7 +3,7 @@ Indecision - Web Application
 Instructions for configuration, development, and deployment.
 
 Todo:
-- Resolve: Error realted to sass-loader: https://github.com/webpack-contrib/sass-loader/issues/761
+- Resolve: Error related to sass-loader: https://github.com/webpack-contrib/sass-loader/issues/761
 
 ------------------------------------------
 Stack:
@@ -16,8 +16,10 @@ Stack:
 ------------------------------------------
 
 Third-party Packages (Found in: package.json):
-Download all dependencies from package.json
+Download all dependencies from package.json for local development
 Command: yarn install 
+Download all dependencies from package.json for production server
+Command: yarn install --production 
 
 Package: https://www.npmjs.com/package/react
 Command: yarn add react@16.0.0
