@@ -110,7 +110,11 @@ Note: DEPRECATED
 
 Package: http://expressjs.com/
 Command: yarn add express@4.15.4
-Purpose: Production web server.
+Purpose: Production web server
+
+Package: http://numeraljs.com/
+Command: yarn add numeral@2.0.6
+Purpose: Format price in currency (ex: '$0,0.00') 
 
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
