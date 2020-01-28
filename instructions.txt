@@ -116,6 +116,10 @@ Package: http://numeraljs.com/
 Command: yarn add numeral@2.0.6
 Purpose: Format price in currency (ex: '$0,0.00') 
 
+Package: https://www.npmjs.com/package/firebase
+Command: yarn add firebase@4.2.0
+Purpose: Firebase for Database and Authentication
+
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".
 warning " > react-modal@2.2.2" has incorrect peer dependency "react-dom@^0.14.0 || ^15.0.0".
