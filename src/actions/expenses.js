@@ -60,3 +60,34 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+// SET_EXPENSES
+export const setExpenses = expenses => ({
+  type: "SET_EXPENSES",
+  expenses
+});
+
+// export const startSetExpenses;
+
+export const startSetExpenses = () => {
+  return dispatch => {
+    // Fetch all expense data once
+    return database
+      .ref("expenses")
+      .once("value")
+      .then(snapshot => {
+        const expenses = [];
+
+        // Parse that data into an array
+        snapshot.forEach(childSnapshot => {
+          expenses.push({
+            id: childSnapshot.key,
+            ...childSnapshot.val()
+          });
+        });
+
+        // Dispatch SET_EXPENSES to redux
+        dispatch(setExpenses(expenses));
+      });
+  };
+};

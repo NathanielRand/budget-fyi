@@ -4,7 +4,9 @@ import {
   startAddExpense,
   addExpense,
   editExpense,
-  removeExpense
+  removeExpense,
+  setExpenses,
+  startSetExpenses
 } from "../../actions/expenses";
 import expenses from "../fixtures/expenses";
 import database from "../../firebase/firebase";
@@ -13,6 +15,17 @@ import database from "../../firebase/firebase";
 // each test that needs to create a mock store.
 const middlewares = [thunk];
 const createMockStore = configureMockStore(middlewares);
+
+beforeEach(done => {
+  const expensesData = {};
+  expenses.forEach(({ id, description, note, amount, createdAt }) => {
+    expensesData[id] = { description, note, amount, createdAt };
+  });
+  database
+    .ref("expenses")
+    .set(expensesData)
+    .then(() => done());
+});
 
 test("Should setup add expense action object with provided values", () => {
   const action = addExpense(expenses[2]);
@@ -28,7 +41,7 @@ test("Should add expense to database and store", done => {
   const store = createMockStore(initialState);
 
   // Expense data to pass into startAddExpense dispatch
-  const expenseData = {
+  const expensesData = {
     description: "Phone",
     amount: 5000,
     note: "Great service",
@@ -37,7 +50,7 @@ test("Should add expense to database and store", done => {
 
   // Dispatch the action
   store
-    .dispatch(startAddExpense(expenseData))
+    .dispatch(startAddExpense(expensesData))
     .then(() => {
       // Test if your store dispatched the expected actions
       const actions = store.getActions();
@@ -45,7 +58,7 @@ test("Should add expense to database and store", done => {
         type: "ADD_EXPENSE",
         expense: {
           id: expect.any(String),
-          ...expenseData
+          ...expensesData
         }
       };
       expect(actions).toEqual([expectedPayload]);
@@ -55,7 +68,7 @@ test("Should add expense to database and store", done => {
     })
     // Promise chaining
     .then(snapshot => {
-      expect(snapshot.val()).toEqual(expenseData);
+      expect(snapshot.val()).toEqual(expensesData);
       // Force Jest to wait until this moment bc
       // this callback is asynchronous.
       done();
@@ -68,7 +81,7 @@ test("Should add expense with defaults to database and store", done => {
   const store = createMockStore(initialState);
 
   // Default data to pass into startAddExpense dispatch
-  const expenseDefault = {
+  const expensesDefault = {
     description: "",
     amount: 0,
     note: "",
@@ -85,7 +98,7 @@ test("Should add expense with defaults to database and store", done => {
         type: "ADD_EXPENSE",
         expense: {
           id: expect.any(String),
-          ...expenseDefault
+          ...expensesDefault
         }
       };
       expect(actions).toEqual([expectedPayload]);
@@ -95,26 +108,12 @@ test("Should add expense with defaults to database and store", done => {
     })
     // Promise chaining
     .then(snapshot => {
-      expect(snapshot.val()).toEqual(expenseDefault);
+      expect(snapshot.val()).toEqual(expensesDefault);
       // Force Jest to wait until this moment bc
       // this callback is asynchronous.
       done();
     });
 });
-
-// test("Should setup add expense action object with default values", () => {
-//   const action = addExpense({});
-//   expect(action).toEqual({
-//     type: "ADD_EXPENSE",
-//     expense: {
-//       id: expect.any(String),
-//       description: "",
-//       note: "",
-//       amount: 0,
-//       createdAt: 0
-//     }
-//   });
-// });
 
 test("Should setup edit expense action object", () => {
   const action = editExpense("123abc", { notes: "Test note" });
@@ -132,5 +131,25 @@ test("Should setup remove expense action object", () => {
   expect(action).toEqual({
     type: "REMOVE_EXPENSE",
     id: "123abc"
+  });
+});
+
+test("Should setup set expense action object with data", () => {
+  const action = setExpenses(expenses);
+  expect(action).toEqual({
+    type: "SET_EXPENSES",
+    expenses
+  });
+});
+
+test("Should fetch the expenses from firebase", done => {
+  const store = createMockStore({});
+  store.dispatch(startSetExpenses()).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: "SET_EXPENSES",
+      expenses
+    });
+    done();
   });
 });

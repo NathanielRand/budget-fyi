@@ -9,7 +9,7 @@ exports[`Should render EditExpense page 1`] = `
         "createdAt": 604800000,
         "description": "Utility",
         "id": 3,
-        "notes": "",
+        "note": "test note 3",
       }
     }
     onSubmit={[Function]}

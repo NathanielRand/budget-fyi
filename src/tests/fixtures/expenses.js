@@ -4,14 +4,14 @@ export default [
   {
     id: 1,
     description: "Phone",
-    notes: "",
+    note: "test note 1",
     amount: 4000,
     createdAt: 0
   },
   {
     id: 2,
     description: "Rent",
-    notes: "",
+    note: "test note 2",
     amount: 75000,
     createdAt: moment(0)
       .subtract(7, "days")
@@ -20,7 +20,7 @@ export default [
   {
     id: 3,
     description: "Utility",
-    notes: "",
+    note: "test note 3",
     amount: 10000,
     createdAt: moment(0)
       .add(7, "days")
