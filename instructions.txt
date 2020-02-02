@@ -11,12 +11,15 @@ Stack:
 - JSX
 - Babel
 - Yarn
+- Redux
 - live-server (development server)
 - expressjs (production server)
+- Firebase Database & Authentication
 ------------------------------------------
 
-Third-party Packages (Found in: package.json):
-Download all dependencies from package.json for local development
+!!! Third-party Packages (Found in: package.json):
+Download all dependencies from package.json for local development !!!
+
 Command: yarn install 
 Download all dependencies from package.json for production server
 Command: yarn install --production 
@@ -101,7 +104,7 @@ Command: yarn add raf@3.3.2
 
 Package: https://www.npmjs.com/package/enzyme-to-json
 Command: yarn add enzyme-to-json@3.4.3
-Purpose: Allows us to get JSON back from enzyme
+Purpose: Allows us to get JSON back from enzyme.
 
 Package: https://www.npmjs.com/package/extract-text-webpack-plugin
 Command: yarn add extract-text-webpack-plugin@3.0.0
@@ -110,15 +113,34 @@ Note: DEPRECATED
 
 Package: http://expressjs.com/
 Command: yarn add express@4.15.4
-Purpose: Production web server
+Purpose: Production web server.
 
 Package: http://numeraljs.com/
 Command: yarn add numeral@2.0.6
-Purpose: Format price in currency (ex: '$0,0.00') 
+Purpose: Format price in currency (ex: '$0,0.00').
 
 Package: https://www.npmjs.com/package/firebase
 Command: yarn add firebase@4.2.0
-Purpose: Firebase for Database and Authentication
+Purpose: Firebase for Database and Authentication.
+
+Package: https://github.com/reduxjs/redux-thunk
+Command: yarn add redux-thunk@2.2.0
+Purpose: Dispatch functions on redux store.
+
+Package: https://github.com/dmitry-zaets/redux-mock-store
+Command: yarn add redux-mock-store@1.2.3
+Purpose: Mock redux store to figure out if an action was dispatched.
+
+Package: https://www.npmjs.com/package/cross-env
+Command: yarn add --dev cross-env@5.0.5
+Purpose: Run scripts that set and use environment variables across platforms
+
+Package: https://www.npmjs.com/package/dotenv
+Command: yarn add --dev dotenv@4.0.0
+Purpose: A zero-dependency module that loads environment variables from a .env file into process.env
+
+Notes: 
+- npm i react-router-dom@latest to prevent timeout error in testing, run `npm audit fix` to fix vulnerabilites.
 
 WARNINGS:
 warning " > react-modal@2.2.2" has incorrect peer dependency "react@^0.14.0 || ^15.0.0".

@@ -1,21 +1,52 @@
 import uuid from "uuid";
+import database from "../firebase/firebase";
+
+// Action Steps (w/out Firebase):
+// 1. Component calls action generator
+// 2. Action generator returns object
+// 3. Component dispatches object
+// 4. Redux store changes
+
+// Action Steps (w/ Firebase):
+// 1. Component calls action generator
+// 2. Action generator returns a function
+// 3. Component dispatches function (?)
+//  - Requires module middleware bc redux does not allow dispatch of functions by default
+// 4. Redux executes function  with help of middleware
+// 5. Function runs (has the ability to dispatch other actions and do whatever it wants)
+//  - For Example: Like Firebase push to add something to the database
+// 6. Have the ability to dispatch another action that returns an object
+// 7. Returned object manipulates redux store
 
 // ADD_EXPENSE
-export const addExpense = ({
-  description = "",
-  note = "",
-  amount = 0,
-  createdAt = 0
-}) => ({
+export const addExpense = expense => ({
   type: "ADD_EXPENSE",
-  expense: {
-    id: uuid(),
-    description,
-    note,
-    amount,
-    createdAt
-  }
+  expense: expense
 });
+
+export const startAddExpense = (expenseData = {}) => {
+  return dispatch => {
+    const {
+      description = "",
+      note = "",
+      amount = 0,
+      createdAt = 0
+    } = expenseData;
+    const expense = { description, note, amount, createdAt };
+
+    return database
+      .ref("expenses")
+      .push(expense)
+      .then(ref => {
+        dispatch(
+          addExpense({
+            id: ref.key,
+            ...expense
+          })
+        );
+      });
+  };
+};
 
 // REMOVE_EXPENSE
 export const removeExpense = ({ id } = {}) => ({

@@ -6,7 +6,6 @@ exports[`Should render page not found 1`] = `
     Whomp! Try a different page my friend...or go home below
   </p>
   <Link
-    replace={false}
     to="/"
   >
     Phone Home Here
