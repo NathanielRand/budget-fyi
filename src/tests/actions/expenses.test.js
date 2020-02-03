@@ -6,10 +6,12 @@ import {
   editExpense,
   removeExpense,
   setExpenses,
-  startSetExpenses
+  startSetExpenses,
+  startRemoveExpense
 } from "../../actions/expenses";
 import expenses from "../fixtures/expenses";
 import database from "../../firebase/firebase";
+import { DocumentContext } from "twilio/lib/rest/preview/sync/service/document";
 
 // Mock store configuration to be reused for
 // each test that needs to create a mock store.
@@ -132,6 +134,31 @@ test("Should setup remove expense action object", () => {
     type: "REMOVE_EXPENSE",
     id: "123abc"
   });
+});
+
+test("Should remove expenses from firebase", done => {
+  const store = createMockStore({});
+  const id = expenses[2].id;
+
+  // Dispatch startRemoveExpense
+  store
+    .dispatch(startRemoveExpense({ id }))
+    .then(() => {
+      // Grab actions
+      const actions = store.getState();
+      // Make assertion
+      expect(actions[0]).toEqual({
+        type: "REMOVE_EXPENSE",
+        id: id
+      });
+      // Fetch data and assert that it actually was removed
+      return database.ref(`expenses/${id}`).once("value");
+    })
+    .then(snapshot => {
+      // Make sure data was actually removed
+      expect(snapshot.val()).toBeFalsy();
+      done();
+    });
 });
 
 test("Should setup set expense action object with data", () => {
