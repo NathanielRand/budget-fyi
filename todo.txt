@@ -8,3 +8,5 @@ TODO:
 5 - Sponsor/AD on create & edit expense modal
 6 - Add reoccurring to create/edit expense form (daily, weekly, monthly, annual)
 7 - Text/email budget summary.
+8 - Trello texts for upcoming expenses
+9 - Change "Add expense" to "Update expense" when make edits to expense that already exists.

@@ -74,6 +74,29 @@ export const editExpense = (id, updates) => ({
   updates
 });
 
+// startEditExpense
+export const startEditExpense = (id, updates) => {
+  // Return function that gets called with dispatch.
+  return dispatch => {
+    // Access database via expenses ID with
+    // ID called in argument above, use update method and
+    // call updates from argument above to apply updates
+    // to firebase database without overriding existing values.
+    // Include return to do something once startEditExpense completes.
+    return (
+      database
+        .ref(`expenses/${id}`)
+        .update(updates)
+        // Run then call to run some code when updates are successfully synced.
+        .then(() => {
+          // Dispatch editExpense (a regular action) and pass
+          // in values from above to change redux store.
+          dispatch(editExpense(id, updates));
+        })
+    );
+  };
+};
+
 // SET_EXPENSES
 export const setExpenses = expenses => ({
   type: "SET_EXPENSES",

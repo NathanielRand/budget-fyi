@@ -4,10 +4,11 @@ import {
   startAddExpense,
   addExpense,
   editExpense,
+  startEditExpense,
   removeExpense,
+  startRemoveExpense,
   setExpenses,
-  startSetExpenses,
-  startRemoveExpense
+  startSetExpenses
 } from "../../actions/expenses";
 import expenses from "../fixtures/expenses";
 import database from "../../firebase/firebase";
@@ -126,6 +127,47 @@ test("Should setup edit expense action object", () => {
       notes: "Test note"
     }
   });
+});
+
+test("Should handle startEditExpense", done => {
+  // Create mock store with initial value of an empty object.
+  const store = createMockStore({});
+  // ID of first expense.
+  const id = expenses[0].id;
+  // Update amount to arbitrary value.
+  const updates = { amount: 21045 };
+  // Dispatch async action.
+  store
+    // Dispatch id & updates arguments.
+    .dispatch(startEditExpense(id, updates))
+    // Since promise was return, toss "then" call
+    // to do something once data is synced.
+    .then(() => {
+      // Assertion to get actions array back.
+      const actions = store.getActions();
+      // Expect something about the first item in actions
+      // to equal the correct type, id is id from above, and
+      // updates equals updates from above. If valid, we
+      // know the action was dispatched correctly.
+      expect(actions[0]).toEqual({
+        type: "EDIT_EXPENSE",
+        id,
+        updates
+      });
+      // Fetch data from Firebase and check out the amount value
+      // to make sure the data changed on firebase.
+      return database.ref(`expenses/${id}`).once("value");
+    })
+    // Since we have the returned promise, we can chain on
+    // a then call. This will fire once that promise completes.
+    // Access the snapshot.
+    .then(snapshot => {
+      // Expect snapshot and call val to get that object back.
+      // Grab amount off of that object and expect it to be equal to
+      // the number from above.
+      expect(snapshot.val().amount).toEqual(updates.amount);
+      done();
+    });
 });
 
 test("Should setup remove expense action object", () => {
