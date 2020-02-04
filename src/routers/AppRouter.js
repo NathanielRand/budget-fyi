@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../components/Header";
-import { LoginPage } from "../components/LoginPage";
+import LoginPage from "../components/LoginPage";
 import DashboardPage from "../components/Dashboard";
 import AddExpensePage from "../components/AddExpense";
 import EditExpensePage from "../components/EditExpense";
