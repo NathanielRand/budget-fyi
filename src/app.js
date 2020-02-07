@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import AppRouter from "./routers/AppRouter";
+import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
 // import { setTextFilter } from "./actions/filters";
@@ -19,17 +19,34 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+let hasRendered = false;
 
-store.dispatch(startSetExpenses()).then(() => {
-  ReactDOM.render(jsx, document.getElementById("app"));
-});
+// Conditionally renders the application
+const renderApp = () => {
+  // Check if we have not rendered. If we already rendered,
+  // then we do nothing inside of this function.
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById("app"));
+    hasRendered = true;
+  }
+};
+
+ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
 
 // State of authentication.
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
-    console.log("Log in");
+    // Fetch expenses
+    store.dispatch(startSetExpenses()).then(() => {
+      renderApp();
+      // Redirect the user if they are currently on the login page.
+      if (history.location.pathname === "/") {
+        history.push("/dashboard");
+      }
+    });
   } else {
-    console.log("Log out");
+    renderApp();
+    // Redirect to home page when logged out.
+    history.push("/");
   }
 });

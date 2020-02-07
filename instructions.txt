@@ -139,6 +139,10 @@ Package: https://www.npmjs.com/package/dotenv
 Command: yarn add --dev dotenv@4.0.0
 Purpose: A zero-dependency module that loads environment variables from a .env file into process.env
 
+Package: https://www.npmjs.com/package/history
+Command: yarn add history@4.7.2
+Purpose: The history library lets you easily manage session history anywhere JavaScript runs.
+
 Notes: 
 - npm i react-router-dom@latest to prevent timeout error in testing, run `npm audit fix` to fix vulnerabilites.
 
