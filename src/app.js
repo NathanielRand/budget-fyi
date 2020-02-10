@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import AppRouter, { history } from "./routers/AppRouter";
@@ -40,6 +40,7 @@ firebase.auth().onAuthStateChanged(user => {
     store.dispatch(login(user.uid));
     // Fetch expenses
     store.dispatch(startSetExpenses()).then(() => {
+      // Render application
       renderApp();
       // Redirect the user if they are currently on the login page.
       if (history.location.pathname === "/") {
