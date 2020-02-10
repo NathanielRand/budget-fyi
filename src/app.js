@@ -4,8 +4,8 @@ import { Provider } from "react-redux";
 import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
-// import { setTextFilter } from "./actions/filters";
-// import getVisibleExpenses from "./selectors/expenses";
+import { login, logout } from "./actions/auth";
+import getVisibleExpenses from "./selectors/expenses";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import "react-dates/lib/css/_datepicker.css";
@@ -36,6 +36,8 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
 // State of authentication.
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
+    // Dispatch login action passing in the user uid property
+    store.dispatch(login(user.uid));
     // Fetch expenses
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
@@ -45,6 +47,8 @@ firebase.auth().onAuthStateChanged(user => {
       }
     });
   } else {
+    // Dispatch logout action
+    store.dispatch(logout());
     renderApp();
     // Redirect to home page when logged out.
     history.push("/");
