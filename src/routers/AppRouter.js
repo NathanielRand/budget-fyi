@@ -1,7 +1,6 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import createHistory from "history/createBrowserHistory";
-import Header from "../components/Header";
 import LoginPage from "../components/LoginPage";
 import DashboardPage from "../components/Dashboard";
 import AddExpensePage from "../components/AddExpense";
@@ -17,7 +16,6 @@ export const history = createHistory();
 const AppRouter = () => (
   <Router history={history}>
     <div>
-      <Header />
       <Switch>
         <Route path="/" component={LoginPage} exact={true} />
         <PrivateRoute path="/dashboard" component={DashboardPage} />
