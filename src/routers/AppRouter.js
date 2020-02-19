@@ -10,6 +10,7 @@ import AboutPage from "../components/About";
 import ContactPage from "../components/Contact";
 import HelpPage from "../components/Help";
 import NotFoundPage from "../components/NotFound";
+import PrivateRoute from "./PrivateRoute";
 
 export const history = createHistory();
 
@@ -19,9 +20,9 @@ const AppRouter = () => (
       <Header />
       <Switch>
         <Route path="/" component={LoginPage} exact={true} />
-        <Route path="/dashboard" component={DashboardPage} />
-        <Route path="/create" component={AddExpensePage} />
-        <Route path="/edit/:id" component={EditExpensePage} />
+        <PrivateRoute path="/dashboard" component={DashboardPage} />
+        <PrivateRoute path="/create" component={AddExpensePage} />
+        <PrivateRoute path="/edit/:id" component={EditExpensePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/help" component={HelpPage} />
