@@ -1,0 +1,65 @@
+.box-layout {
+  background: url("/images/Shore2.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-layout__box {
+  background: #546e7a;
+  padding: 5%;
+  border: 2px white solid;
+  border-radius: 22px 66px;
+  width: 30rem;
+  text-align: center;
+  color: white;
+}
+
+.box-layout__title {
+  font-size: 66px;
+}
+
+.box-layout__sub-title {
+  font-size: 30px;
+}
+
+.box-layout__button {
+  font-family: "Rajdhani";
+  font-size: 30px;
+  margin-top: 20%;
+  padding: 8%;
+  color: #455a64;
+  border: 2px white solid;
+  border-radius: 11px 33px;
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landing-title-fyi {
+  // Reference: https://uigradients.com/#SublimeLight
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
