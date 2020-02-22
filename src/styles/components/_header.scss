@@ -1,0 +1,59 @@
+.header {
+  background: #263238;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size 0;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none !important;
+  h1 {
+    margin: 0;
+  }
+}
+
+.header__title-fyi {
+  text-decoration: none !important;
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__button {
+  text-decoration: none !important;
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Rajdhani";
+  font-size: $font-size-med;
+  border: none;
+
+  // background: $primary-gradient; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   $primary-gradient
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   $primary-gradient
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // border: 2px white solid;
+  // border-radius: 10px 30px;
+  // color: #455a64;
+  // padding: 1.5rem 3rem;
+}

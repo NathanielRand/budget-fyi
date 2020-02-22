@@ -19,32 +19,30 @@
 }
 
 .box-layout__title {
-  font-size: 66px;
+  font-size: $font-size-x-lrg;
 }
 
 .box-layout__sub-title {
-  font-size: 30px;
+  font-size: $font-size-med;
+  font-style: italic;
 }
 
 .box-layout__button {
-  font-family: "Rajdhani";
-  font-size: 30px;
-  margin-top: 20%;
-  padding: 8%;
-  color: #455a64;
-  border: 2px white solid;
-  border-radius: 11px 33px;
-  background: #70e1f5; /* fallback for old browsers */
+  background: $primary-gradient; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to top,
-    #70e1f5,
-    #ffd194
+    $primary-gradient
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to top,
-    #70e1f5,
-    #ffd194
+    $primary-gradient
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 2px white solid;
+  border-radius: 11px 33px;
+  color: #37474f;
+  font-family: "Rajdhani";
+  font-size: $font-size-med;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 2.2rem;
 }
 
 .landing-title-fyi {

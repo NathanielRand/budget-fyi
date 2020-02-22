@@ -1,0 +1,47 @@
+.page-header {
+  background: #37474f;
+  margin-bottom: $l-size;
+  padding: $l-size 0;
+}
+
+.page-header__title {
+  color: #cfd8dc;
+  font-size: $font-size-lrg;
+  font-weight: 200;
+  margin: 0;
+  span {
+    font-weight: bold;
+    background: $primary-gradient; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      $primary-gradient
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      $primary-gradient
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.page-header__actions {
+  margin-top: $l-size;
+}
+
+.page-header__button {
+  text-decoration: none !important;
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 2px white solid;
+  border-radius: 9px 27px;
+  color: #455a64;
+  display: inline-block;
+  font-family: "Rajdhani";
+  font-size: $font-size-small;
+  line-height: 1;
+  padding: 1rem 2rem;
+}
