@@ -1,0 +1,65 @@
+.text-input {
+  background: #eceff1;
+  border: 1px solid #b0bec5;
+  border-radius: 6px 18px;
+  color: #263238;
+  font-family: "Rajdhani";
+  font-size: $font-size-xsmall;
+  font-weight: 300;
+  height: 50px;
+  padding: $s-size;
+}
+
+.text-input:focus {
+  background: #fff;
+  outline: none;
+}
+
+.select {
+  // @extend .text-input;
+  border: 1px solid #b0bec5;
+  color: #263238;
+  font-size: $font-size-xsmall;
+  font-family: "Rajdhani";
+  height: 5rem;
+  outline: none;
+}
+
+.textarea {
+  @extend .text-input;
+  height: 10rem;
+}
+
+.SingleDatePickerInput {
+  background: #eceff1 !important;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px 18px !important;
+  width: 25%;
+}
+
+.SingleDatePickerInput:focus {
+  background: #fff;
+}
+
+.DateInput {
+  background: #eceff1 !important;
+  border-radius: 6px 18px !important;
+  width: 25%;
+}
+
+.DateInput:focus {
+  background: #eceff1;
+}
+
+.DateRangePickerInput {
+  background: #eceff1;
+  border: 1px solid #cacccd;
+  display: inline-block;
+  border-radius: 6px 18px !important;
+}
+
+.CalendarMonth table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 6% !important;
+}

@@ -4,7 +4,7 @@ import ExpenseListItem from "./ExpenseListItem";
 import selectExpense from "../selectors/expenses";
 
 export const ExpenseList = props => (
-  <div>
+  <div className="form__background">
     <p>$1000 (EXPENSES) / $1300 (INCOME)</p>
     <p>Expense Total: </p>
     <p>Expense Count: {props.expenses.length}</p>
