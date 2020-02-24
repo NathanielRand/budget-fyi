@@ -31,10 +31,25 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 2px white solid;
   border-radius: 9px 27px;
-  color: #37474f;
+  color: #546e7a;
   font-family: "Rajdhani";
   font-size: $font-size-med;
   margin-top: 1rem;
-  margin-bottom: 3rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.form__button--secondary {
+  background: none;
+  border: 2px #cfd8dc solid;
+  color: #cfd8dc;
+  font-size: $font-size-small;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 1.2rem;
+}
+
+.form__button--secondary:hover {
+  background: #90a4ae;
+  color: #eceff1;
 }

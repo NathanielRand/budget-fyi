@@ -1,0 +1,28 @@
+.list__background {
+  background: #607d8b;
+  margin-top: 0;
+}
+
+.list-header {
+  background: #546e7a;
+  border: 2px solid #78909c;
+  border-radius: 10px 30px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.list-header__text {
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list-item {
+}
