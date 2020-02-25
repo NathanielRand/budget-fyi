@@ -1,18 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render ExpenseForm correctly 1`] = `
-<div>
+<div
+  className="form__background"
+>
   <form
+    className="form"
     onSubmit={[Function]}
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -20,6 +25,7 @@ exports[`Should render ExpenseForm correctly 1`] = `
     />
     <SingleDatePicker
       anchorDirection="left"
+      className="date-input"
       customCloseIcon={null}
       customInputIcon={null}
       date={"1970-01-01T00:00:00.000Z"}
@@ -95,30 +101,42 @@ exports[`Should render ExpenseForm correctly 1`] = `
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add an expense note (optional)"
       value=""
     />
-    <button>
-      Add Expense
-    </button>
+    <div
+      className="form__actions"
+    >
+      <button
+        className="form__button"
+      >
+        Save Expense
+      </button>
+    </div>
   </form>
 </div>
 `;
 
 exports[`Should render ExpenseForm with expense data 1`] = `
-<div>
+<div
+  className="form__background"
+>
   <form
+    className="form"
     onSubmit={[Function]}
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value="Rent"
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -126,6 +144,7 @@ exports[`Should render ExpenseForm with expense data 1`] = `
     />
     <SingleDatePicker
       anchorDirection="left"
+      className="date-input"
       customCloseIcon={null}
       customInputIcon={null}
       date={"1969-12-25T00:00:00.000Z"}
@@ -201,30 +220,42 @@ exports[`Should render ExpenseForm with expense data 1`] = `
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add an expense note (optional)"
       value="test note 2"
     />
-    <button>
-      Add Expense
-    </button>
+    <div
+      className="form__actions"
+    >
+      <button
+        className="form__button"
+      >
+        Save Expense
+      </button>
+    </div>
   </form>
 </div>
 `;
 
 exports[`Should render error for invalid form submission 1`] = `
-<div>
+<div
+  className="form__background"
+>
   <form
+    className="form"
     onSubmit={[Function]}
   >
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -232,6 +263,7 @@ exports[`Should render error for invalid form submission 1`] = `
     />
     <SingleDatePicker
       anchorDirection="left"
+      className="date-input"
       customCloseIcon={null}
       customInputIcon={null}
       date={"1970-01-01T00:00:00.000Z"}
@@ -307,33 +339,47 @@ exports[`Should render error for invalid form submission 1`] = `
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add an expense note (optional)"
       value=""
     />
-    <button>
-      Add Expense
-    </button>
+    <div
+      className="form__actions"
+    >
+      <button
+        className="form__button"
+      >
+        Save Expense
+      </button>
+    </div>
   </form>
 </div>
 `;
 
 exports[`Should render error for invalid form submission 2`] = `
-<div>
-  <p>
-    Please provide description and amount.
-  </p>
+<div
+  className="form__background"
+>
   <form
+    className="form"
     onSubmit={[Function]}
   >
+    <p
+      className="form__error"
+    >
+      Please provide description and amount.
+    </p>
     <input
       autoFocus={true}
+      className="text-input"
       onChange={[Function]}
       placeholder="Description"
       type="text"
       value=""
     />
     <input
+      className="text-input"
       onChange={[Function]}
       placeholder="Amount"
       type="text"
@@ -341,6 +387,7 @@ exports[`Should render error for invalid form submission 2`] = `
     />
     <SingleDatePicker
       anchorDirection="left"
+      className="date-input"
       customCloseIcon={null}
       customInputIcon={null}
       date={"1970-01-01T00:00:00.000Z"}
@@ -416,13 +463,20 @@ exports[`Should render error for invalid form submission 2`] = `
       withPortal={false}
     />
     <textarea
+      className="textarea"
       onChange={[Function]}
       placeholder="Add an expense note (optional)"
       value=""
     />
-    <button>
-      Add Expense
-    </button>
+    <div
+      className="form__actions"
+    >
+      <button
+        className="form__button"
+      >
+        Save Expense
+      </button>
+    </div>
   </form>
 </div>
 `;
