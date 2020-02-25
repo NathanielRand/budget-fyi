@@ -143,6 +143,10 @@ Package: https://www.npmjs.com/package/history
 Command: yarn add history@4.7.2
 Purpose: The history library lets you easily manage session history anywhere JavaScript runs.
 
+Package: https://babeljs.io/docs/en/babel-polyfill
+Command: yarn add babel-polyfill@6.26.0
+Purpose: Provide modern functionality on older browsers that do not natively support.
+
 Notes: 
 - npm i react-router-dom@latest to prevent timeout error in testing, run `npm audit fix` to fix vulnerabilites.
 
