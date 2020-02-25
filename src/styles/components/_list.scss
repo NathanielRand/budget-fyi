@@ -1,6 +1,7 @@
 .list__background {
   background: #607d8b;
   margin-top: 0;
+  padding-bottom: 6rem;
 }
 
 .list-header {
@@ -8,6 +9,7 @@
   border: 2px solid #78909c;
   border-radius: 10px 30px 0px 0px;
   display: flex;
+  font-size: $font-size-med;
   justify-content: space-between;
   padding: 2rem 4rem;
 }
@@ -25,4 +27,99 @@
 }
 
 .list-item {
+  background: #78909c;
+  border: 1px solid #90a4ae;
+  border-top: none;
+  color: #cfd8dc;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  transition: background 0.3s ease;
+  &:hover {
+    background: #90a4ae;
+    color: #eceff1;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 4rem 3rem 4rem;
+  }
+}
+
+.list-item__title {
+  word-break: break-all;
+  margin-bottom: 1rem;
+}
+
+.list-item__sub-title {
+  color: #b0bec5;
+  word-break: break-all;
+}
+
+.list-item__data {
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: $font-size-lrg;
+  margin: $s-size 0 $s-size 0;
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: $l-size;
+    padding-left: $s-size;
+  }
+}
+
+.list-item__message {
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: $font-size-med;
+  padding: $l-size;
+  justify-content: center;
+  &:hover {
+    background: none;
+    background: $primary-gradient; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      $primary-gradient
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      $primary-gradient
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.list-footer {
+  background: #546e7a;
+  border: 2px solid #78909c;
+  border-top: none;
+  border-radius: 0px 0px 10px 30px;
+  display: flex;
+  font-size: $font-size-small;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+
+.list-footer__text {
+  background: $primary-gradient; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    $primary-gradient
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    $primary-gradient
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

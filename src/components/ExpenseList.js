@@ -14,12 +14,17 @@ export const ExpenseList = props => (
       {/* <p>Expense Count: {props.expenses.length}</p>
       <p>Expense Average: (length divided by total then round up to floor)</p> */}
       {props.expenses.length === 0 ? (
-        <p>No Expenses</p>
+        <div className="list-item list-item__message">
+          <span>No expenses...lucky you</span>
+        </div>
       ) : (
         props.expenses.map(expense => {
           return <ExpenseListItem key={expense.id} {...expense} />;
         })
       )}
+      <div className="list-footer">
+        <div className="list-footer__text">Wooh, that's it!</div>
+      </div>
     </div>
   </div>
 );
