@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import ExpenseForm from "./ExpenseForm";
 import { startAddExpense } from "../actions/expenses";
@@ -18,6 +19,11 @@ export class AddExpensePage extends React.Component {
         </div>
         <div className="form__background">
           <div className="content-container">
+            <Link to="/dashboard">
+              <button className="form__button form__button--secondary">
+                Cancel
+              </button>
+            </Link>
             <ExpenseForm onSubmit={this.onSubmit} />
           </div>
         </div>
