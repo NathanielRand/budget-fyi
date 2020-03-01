@@ -11,3 +11,4 @@ TODO:
 8 - Trello texts for upcoming expenses
 9 - Change "Add expense" to "Update expense" when make edits to expense that already exists.
 10 - Add display name user.displayName and images via google user.photoURL
+11 - Date should reset to current month on every long in

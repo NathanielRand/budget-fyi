@@ -16,6 +16,11 @@
   width: 45rem;
   text-align: center;
   color: white;
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: $l-size;
+    padding-left: $s-size;
+    width: 35rem;
+  }
 }
 
 .box-layout__title {
