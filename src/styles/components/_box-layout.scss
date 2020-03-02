@@ -1,5 +1,20 @@
-.box-layout {
+.login {
   background: url("/images/Shore2.jpg");
+}
+
+.login-content {
+  font-family: "Rajdhani";
+}
+
+.login-content__title {
+  font-size: $font-size-lrg;
+  font-weight: 600;
+  color: #eceff1;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.box-layout {
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -13,6 +28,7 @@
   padding: 5%;
   border: 2px white solid;
   border-radius: 22px 66px;
+
   width: 45rem;
   text-align: center;
   color: white;
@@ -25,6 +41,7 @@
 
 .box-layout__title {
   font-size: $font-size-x-lrg;
+  font-weight: 400;
 }
 
 .box-layout__sub-title {
@@ -65,4 +82,5 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
