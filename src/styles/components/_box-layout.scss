@@ -1,17 +1,43 @@
 .login {
-  background: url("/images/Shore2.jpg");
+  // background: url("/images/Shore2.jpg");
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffd194,
+    #70e1f5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffd194,
+    #70e1f5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .login-content {
   font-family: "Rajdhani";
+  padding-bottom: 5rem;
+  .ul {
+    list-style-type: square;
+  }
 }
 
 .login-content__title {
+  font-family: "Rajdhani";
   font-size: $font-size-lrg;
   font-weight: 600;
   color: #eceff1;
   text-align: center;
   padding-bottom: 5rem;
+  text-shadow: 1px 1px #90a4ae;
+}
+
+.login-content__image {
+  width: 15rem;
+  margin-bottom: 10rem;
+  margin-left: 42.5%;
+  @media (max-width: $desktop-breakpoint) {
+    margin-left: 27.5%;
+  }
 }
 
 .box-layout {

@@ -15,11 +15,16 @@ export const LoginPage = ({ startLogin }) => (
         </button>
       </div>
     </div>
-    {/* <div className="login-content">
+    <div className="login-content">
       <div className="content-container">
-        <div className="login-content__title">Simple & Secure Budgeting</div>
+        <div className="login-content__title">Simple Budgeting</div>
+        <img className="login-content__image" src="/images/bill3.png"></img>
+        <div className="login-content__title">Easy & Fast</div>
+        <img className="login-content__image" src="/images/wallet.png"></img>
+        <div className="login-content__title">Private & Secure</div>
+        <img className="login-content__image" src="/images/privacy.png"></img>
       </div>
-    </div> */}
+    </div>
   </div>
 );
 
