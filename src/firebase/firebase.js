@@ -1,4 +1,5 @@
 import * as firebase from "firebase";
+// import "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -12,7 +13,7 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
+firebase.analytics();
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
