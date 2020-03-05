@@ -11,6 +11,7 @@ import HelpPage from "../components/Help";
 import NotFoundPage from "../components/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import Footer from "../components/Footer";
 
 export const history = createHistory();
 
@@ -27,6 +28,7 @@ const AppRouter = () => (
         <Route path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   </Router>
 );
