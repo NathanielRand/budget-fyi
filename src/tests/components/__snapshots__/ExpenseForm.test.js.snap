@@ -368,7 +368,7 @@ exports[`Should render error for invalid form submission 2`] = `
     <p
       className="form__error"
     >
-      Please provide description and amount.
+      Please provide description and amount
     </p>
     <input
       autoFocus={true}
