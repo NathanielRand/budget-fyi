@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&display=swap");
+
+.footer {
+  background: #546e7a;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size 0;
+  border-top: 4px #eceff1 solid;
+  font-family: "Rajdhani";
+}
+
+.footer-title {
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: $font-size-med;
+  margin-left: 3rem;
+  @media (min-width: $desktop-breakpoint) {
+    margin-left: 30%;
+    font-size: $font-size-lrg;
+  }
+}
+
+.footer-content {
+  color: #cfd8dc;
+  font-family: "Rajdhani";
+  font-size: $font-size-med;
+  margin-right: 6rem;
+  text-decoration: none !important;
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #70e1f5,
+    #ffd194
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (min-width: $desktop-breakpoint) {
+    margin-right: 40%;
+  }
+}
