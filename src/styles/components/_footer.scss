@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&display=swap");
 
 .footer {
-  background: #546e7a;
   align-items: center;
+  background: #546e7a;
+  border-top: 4px #eceff1 solid;
   display: flex;
+  font-family: "Rajdhani";
   justify-content: space-between;
   padding: $s-size 0;
-  border-top: 4px #eceff1 solid;
-  font-family: "Rajdhani";
 }
 
 .footer-title {
@@ -25,6 +25,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: $font-size-med;
+  margin-right: 2rem;
   margin-left: 3rem;
   @media (min-width: $desktop-breakpoint) {
     margin-left: 30%;
@@ -36,6 +37,7 @@
   color: #cfd8dc;
   font-family: "Rajdhani";
   font-size: $font-size-med;
+  margin-left: 2rem;
   margin-right: 6rem;
   text-decoration: none !important;
   background: #70e1f5; /* fallback for old browsers */

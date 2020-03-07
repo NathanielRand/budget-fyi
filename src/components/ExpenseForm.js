@@ -95,46 +95,6 @@ export default class ExpenseForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <label>
-            <input
-              className="form-check-input"
-              type="radio"
-              name="react-tips"
-              value="option1"
-              checked={true}
-            />
-            Once
-          </label>
-          <label>
-            <input
-              className="form-check-input"
-              type="radio"
-              name="react-tips"
-              value="option1"
-              checked={true}
-            />
-            Weekly
-          </label>
-          <label>
-            <input
-              className="form-check-input"
-              type="radio"
-              name="react-tips"
-              value="option1"
-              checked={true}
-            />
-            Monthly
-          </label>
-          <label>
-            <input
-              className="form-check-input"
-              type="radio"
-              name="react-tips"
-              value="option1"
-              checked={true}
-            />
-            Annual
-          </label>
           <textarea
             placeholder="Add an expense note (optional)"
             className="textarea"
