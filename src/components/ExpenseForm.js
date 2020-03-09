@@ -95,6 +95,14 @@ export default class ExpenseForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
+          <select className="select frequency">
+            <option selected value="once">
+              Once
+            </option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="annual">Annual</option>
+          </select>
           <textarea
             placeholder="Add an expense note (optional)"
             className="textarea"
